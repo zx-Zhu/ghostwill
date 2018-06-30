@@ -1,10 +1,11 @@
 {{!< default}}
 {{!-- 顶部图片x --}}
-<div id="post-header" class="site-head regular" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}  data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
+{{#post}}
+<div id="post-header" class="site-head regular" {{#if feature_image}}style="background-image: url({{feature_image}})"{{/if}}  data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
 <div class="post-header-mask"></div>
 <div class="post-cover-info">
-{{#post}}
-<h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+
+<h1 class="post-title"><a href="{{feature_image}}">{{{title}}}</a></h1>
 <h2 class="post-publish-time">{{date format="MMMM DD, YYYY"}}</h2>
 <h2 class="post-tags">{{tags prefix="" separator=" | "}}</h2>
 {{/post}}
@@ -53,9 +54,9 @@ onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');ret
 <img id="imgSinaShare" class="img_sina_share" title="将选中内容分享到新浪微博" src="http://simg.sinajs.cn/blog7style/images/common/share.gif" />
 
 <section class="author">
-{{#if author.image}}
+{{#if author.profile_image}}
 <a href="{{author.website}}" class="post-author-avatar">
-<img src="{{author.image}}" alt="{{author.name}}">
+<img src="{{author.profile_image}}" alt="{{author.name}}">
 </a>
 {{/if}}
 

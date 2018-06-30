@@ -4,7 +4,7 @@
 <div class="top-wrap">
 <div class="nav-url">
 <ul>
-<li><a href="{{@blog.url}}">Blog</a></li>
+<li><a href="{{feature_image}}">Blog</a></li>
 <li><a href="">About</a></li>
 <li><a href="">Works</a></li>
 </ul>
@@ -22,16 +22,14 @@
 <div class="banner-mask"></div>
 <div class="site-head-content inner">
 <a class="home-blog-title" href="{{@blog.url}}">{{@blog.title}}</a>
-{{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+{{#if @blog.logo}}<a class="blog-logo" href="{{@blog.feature_image}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
 <h2 class="blog-description">{{@blog.description}}</h2>
 <div class="social-account">
 <ul>
 <li>
-<a href="http://weibo.com/foru17" target="_blank"><i class="iconfont icon-weibo-pure">&#xe61c;</i></a>
-<a href="https://twitter.com/foru17" target="_blank"><i class="iconfont icon-twitter-pure">&#xf000e;</i></a>
-<a href="https://github.com/foru17" target="_blank"><i class="iconfont icon-github-pure">&#xe611;</i></a>
-<a href="https://dribbble.com/luolei" target="_blank"><i class="iconfont icon-dribble-pure">&#xe612;</i></a>
-<a href="http://instagram.com/foru17" target="_blank"><i class="iconfont icon-instagram-pure">&#xe613;</i></a>
+<a href="https://twitter.com/_Z_Z_X_" target="_blank"><i class="iconfont icon-twitter-pure">&#xf000e;</i></a>
+<a href="https://github.com/zx-Zhu" target="_blank"><i class="iconfont icon-github-pure">&#xe611;</i></a>
+<a href="https://www.instagram.com/jeff_zhu98/" target="_blank"><i class="iconfont icon-instagram-pure">&#xe613;</i></a>
 {{!--  <a href=""><i class="iconfont icon-weixin-pure">&#x343b;</i></a> --}}
 <a href="{{@blog.url}}/rss/"><i class="iconfont icon-feed">&#xe751;</i></a>
 </li>
@@ -49,9 +47,10 @@
 <article class="post-in-list {{post_class}}">
 <section class="post-excerpt">
 <div class="post-image">
-<a href="{{url}}">
+{{!-- <a href="{{posts.feature_image}}">
 {{content words="0"}}
-</a>
+</a> --}}
+<img src="{{feature_image}}" />
 </div>
 <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 <div class="excerpt-word hidden">
